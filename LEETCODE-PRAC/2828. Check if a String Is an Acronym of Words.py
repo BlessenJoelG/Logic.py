@@ -1,5 +1,5 @@
 class Solution:
-    def isAcronym(self, words: List[str], s: str) -> bool:
+    def isAcronym(self, words, s) -> bool:
         acro = ""
         for _ in words:
             acro = acro + _[0]
