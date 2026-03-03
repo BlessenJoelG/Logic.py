@@ -1,5 +1,5 @@
 class Solution:
-    def arrayStringsAreEqual(self, word1: List[str], word2: List[str]) -> bool:
+    def arrayStringsAreEqual(self, word1, word2) -> bool:
         word1,word2 = "".join(word1),"".join(word2)
         if word1 == word2:
             return True
