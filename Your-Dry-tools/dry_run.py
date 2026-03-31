@@ -1,10 +1,7 @@
-result = []
+nums = [3,3]
+target = 6
 for i in range(len(nums)):
-    c = 0
-    for j in range(len(nums)):
-        if j == i:
-            continue
-        elif nums[i]>nums[j]:
-            c = c+1
-    result.append(c)
-print(result)
+    for j in range(i+1,len(nums)):
+        if nums[i]+nums[j] == target:
+            print(i,j)
+            break
