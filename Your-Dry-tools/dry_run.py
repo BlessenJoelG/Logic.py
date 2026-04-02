@@ -1,3 +1,7 @@
-nums = [3,1,2,10,1]
-res = [sum(nums[:i+1]) for i in range(len(nums))]
-print(res)
+edges,lst = [[1,2],[5,1],[1,3],[1,4]],[]
+for x in edges:
+    lst.extend(x)
+for _ in lst:
+    if lst.count(_) == len(edges):
+        print(_)
+        break
