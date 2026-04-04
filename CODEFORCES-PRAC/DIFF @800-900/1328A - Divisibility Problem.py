@@ -1,7 +1,7 @@
 t = int(input())
 div_chck,ste = [],[]
 for _ in range(t):
-    div_chck.extend(map(int,input().split()))
+    div_chck.extend(map(int,input(\).split()))
     if(div_chck[0]%div_chck[1]==0):
         ans = 0
         ste.append(ans)
