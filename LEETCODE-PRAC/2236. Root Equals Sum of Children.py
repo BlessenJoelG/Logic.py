@@ -1,3 +1,4 @@
+#my first binarytree category leetcode question
 class Solution:
     def checkTree(self, root: Optional[TreeNode]) -> bool:
         roots = root.val
