@@ -4,5 +4,4 @@ class Solution:
         for i in range(len(nums)):
             if nums[i] == target:
                 mini = min(mini,abs(i-start))
-        return mini
-                
+        return mini     
