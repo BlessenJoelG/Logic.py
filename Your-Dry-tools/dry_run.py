@@ -1,11 +1,9 @@
-n = int(input())
-stairs,res = list(map(int,input().split())),[]
-for i in range(len(stairs)):
-    if i == (len(stairs)-1):
-        res.append(stairs[i])
-    elif stairs[i]<stairs[i+1]:
-        pass
-    elif stairs[i]>=stairs[i+1]:
-        res.append(stairs[i])
-print(len(res))
-print(*res)
+class anagram:
+    def chk_anagram(self,a,b):
+        s = a
+        t = b
+        if sorted([x for x in s]) == sorted([x for x in t]):
+            return True
+        return False
+Answer = anagram()
+print(Answer.chk_anagram("anagram","nagaram"))
