@@ -1,7 +1,8 @@
-n = 5
-nums = [1,0,0,1,0]
-i = 0
-max = 0
-while(i!=len(nums)):
-    if nums[i]!= 1:
-        
+nums,res = [1,2,3,4,5,6,7,8,9,0],[]
+for i in range(len(nums)):
+    if i%10 == nums[i]:
+        res.append(i)
+if len(res)>0:
+    return(min(res))
+else:
+    return(-1)
