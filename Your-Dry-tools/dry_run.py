@@ -1,6 +1,7 @@
-num,tot = [4,3,2,1],""
-for x in (num):
-    tot = tot + str(x)
-tot = str(int(tot)+1)
-num = [int(x) for x in tot]
-print(num)
+n = 5
+nums = [1,0,0,1,0]
+i = 0
+max = 0
+while(i!=len(nums)):
+    if nums[i]!= 1:
+        
