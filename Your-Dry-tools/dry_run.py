@@ -1,8 +1,8 @@
-nums,res = [1,2,3,4,5,6,7,8,9,0],[]
-for i in range(len(nums)):
-    if i%10 == nums[i]:
-        res.append(i)
-if len(res)>0:
-    return(min(res))
-else:
-    return(-1)
+n,e,o = bin(int(input()))[2:],0,0
+n = [int(x) for x in reversed(str(n))]
+for i in range(len(n)):
+    if n[i] == 1 and i%2 == 0:
+        e += 1
+    elif n[i] == 1 and i%2 != 0:
+        o += 1
+print([e,o])
