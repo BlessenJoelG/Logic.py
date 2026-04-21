@@ -1,6 +1,10 @@
-mountain = [2,4,4]
+a_nums = list(map(int,input().split()))
+b_nums = list(map(int,input().split()))
 res = []
-for i in range(1,len(mountain)-1):
-    if mountain[i] > mountain[i-1] and mountain[i] > mountain[i+1]:
-        res.append(i)
+for x in a_nums:
+    res.append(b_nums[0]-x)
 print(res)
+if res == sorted(res):
+    print("YES")
+else:
+    print("NO")
