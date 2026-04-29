@@ -4,4 +4,4 @@ for _ in range(int(input())):
         res.extend([str(x)*i for i in range(1,5)])
     for i in range(0,res.index(n)+1):
         ans += len(res[i])
-print(ans)
+    print(ans)
