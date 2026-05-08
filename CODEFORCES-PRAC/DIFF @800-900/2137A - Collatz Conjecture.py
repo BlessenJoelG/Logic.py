@@ -5,4 +5,4 @@ for i in range(int(input())):
             x = (x-1)//3
         else:
             x = x*2
-print(x)
+    print(x)
