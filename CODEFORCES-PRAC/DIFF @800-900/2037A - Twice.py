@@ -2,8 +2,6 @@ for _ in range(int(input())):
     n = int(input())
     nums = list(map(int,input().split()))
     c = 0
-    for x in nums:
-        if nums.count(x) == 2:
-            c += 1
-            nums.remove(x)
+    for x in set(nums):
+            c += nums.count(x)//2
     print(c)
