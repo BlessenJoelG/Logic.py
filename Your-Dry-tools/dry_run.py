@@ -1,9 +1,7 @@
-for _ in range(int(input())):
-    n,m = map(int,input().split())
-    x,s,c = input(),input(),0
-    if len(x)>len(s):
-        c = -1
-    while(len(x)<=len(s)):
-        x = x+x
-        c += 1
-    print(c)
+encoded = [1,2,3]
+first = 1
+ans = []
+ans.append(first)
+for _ in range(len(encoded)):
+    ans.append(ans[_]^encoded[_])
+print(ans)
