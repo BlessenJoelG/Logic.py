@@ -1,7 +1,6 @@
-encoded = [1,2,3]
-first = 1
-ans = []
-ans.append(first)
-for _ in range(len(encoded)):
-    ans.append(ans[_]^encoded[_])
-print(ans)
+nums1 = [1,2,3]
+nums2 = [7,2,4]
+if set(nums1).intersection(set(nums2)):
+    print(min(set(nums1).intersection(set(nums2))))
+else:
+    print(-1)
