@@ -1,5 +1,3 @@
-import math
-for _ in range(int(input())):
-    a,b = map(int,input().split())
-    low,high = min(a,b),max(a,b)
-    print(math.ceil(high-low))
+n = 5
+nums = [1,2,3,4,5]
+print(sum(nums)//n)
