@@ -1,8 +1,6 @@
 for _ in range(int(input())):
     n,a,b = map(int,input().split())
-    if n%1 == 0 and n%2 == 0:  
-        print(min(n*a,(n//2)*b))
-    elif n == 1:
+    if 2*a < b:
         print(n*a)
-    elif n%2!=0:
+    else:
         print((n//2)*b+(n%2)*a)
