@@ -1,8 +1,13 @@
-for _ in range(int(input())):
-    n,a,b = map(int,input().split())
-    if n%1 == 0 and n%2 == 0:  
-        print(min(n*a,(n//2)*b))
-    elif n == 1:
-        print(n*a)
-    elif n%2!=0:
-        print((n//2)*b+(n%2)*a)
+class Solution:
+    def largeEven(self,x,i):
+        while(i!=0):
+            if int(x)%2==0:
+                return x
+            else:
+                i = i-1
+                x = x[0:i]
+        return x
+s = input()
+i = len(str(s))
+ans = Solution()
+print(ans.largeEven(s,i))
