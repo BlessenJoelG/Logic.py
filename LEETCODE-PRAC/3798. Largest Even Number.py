@@ -7,4 +7,4 @@ class Solution:
             else:
                 i = i-1
                 s = s[0:i]
-        return s
+        return s        
