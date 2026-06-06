@@ -16,3 +16,16 @@ class Solution:
         for _ in range(len(nums)):
             answer.append(abs(leftsum[_]-rightsum[_]))
         return answer
+    
+class Solution:
+    def leftRightDifference(self, nums: List[int]) -> List[int]:
+        ls,rs,res =[],[],[]
+        for i in range(len(nums)):
+            ls.append(sum(nums[:i]))
+        nums = nums[::-1]
+        for i in range(len(nums)):
+            rs.append(sum(nums[:i]))
+        rs = rs[::-1]
+        for i in range(len(nums)):
+            res.append(abs(ls[i]-rs[i]))
+        return res
