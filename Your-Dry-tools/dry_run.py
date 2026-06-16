@@ -1,4 +1,12 @@
-for _ in range(int(input())):
-    n = int(input())
-    h = list(map(int,input().split()))
-    print((max(h)-min(h))+1)
+s = "z*#"
+res = ""
+for x in s:
+    if x.isalpha():
+        res = res + x
+    elif x == "*" and len(res)>=1:
+        res = res[:-1]
+    elif x == "#":
+        res = res+res
+    elif x == "%":
+        res = res[::-1]
+print(res)
