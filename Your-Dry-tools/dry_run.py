@@ -1,12 +1,16 @@
-groupSizes = [3,3,3,3,3,1,3]
-grp = {}
-for i in range(len(groupSizes)):
-    if groupSizes[i] not in grp:
-        grp[groupSizes[i]] = [i]
+nums = [1,2,3,4]
+freq = {}
+for x in nums:
+    if x not in freq:
+        freq[x] = 1
     else:
-        grp[groupSizes[i]].append(i)
-ans = []
-for size,people in grp.items():
-    for i in range(0,len(people),size):
-        ans.append(people[i:i+size])
-print(ans)
+        freq[x] += 1
+res = []
+for i in range(max(freq.values())):
+    ans = []
+    for num,times in freq.items():
+        if times>0:
+            ans.append(num)
+            freq[num] -= 1
+    res.append(ans)
+print(res)
