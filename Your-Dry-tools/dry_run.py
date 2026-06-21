@@ -1,11 +1,11 @@
-arr = ["aaa","aa","a"]
-k = 1
-ans = []
-for x in arr:
-    if arr.count(x) == 1:
-        ans.append(x)
-print(ans)
-if len(ans)<=k-1:
-    print('""')
-else:
-    print(ans[k-1])
+costs = [1,3,2,4,1]
+coins = 7
+costs.sort()
+c = 0
+for price in costs:
+    if price<=coins:
+        coins -= price
+        c += 1
+    else:
+        break
+print(c)
