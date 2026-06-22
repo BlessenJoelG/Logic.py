@@ -1,14 +1,11 @@
-nums1 = [[2,4],[3,6],[5,5]]
-nums2 = [[1,3],[4,3]]
-freq,res = {},[]
-for x in nums1:
-    if x[0] not in freq:
-        freq[x[0]] = x[1]
-for x in nums2:
-    if x[0] not in freq:
-        freq[x[0]] = x[1]
+rings = "B0R0G0R9R0B0G0"
+freq,c = {},0
+for i in range(0,len(rings),2):
+    if rings[i+1] not in freq:
+        freq[rings[i+1]] = [rings[i]]
     else:
-        freq[x[0]] += x[1]
-for x in freq.items():
-    res.append(list(x))
-print(sorted(res))
+        freq[rings[i+1]] += [rings[i]]
+for x in freq.values():
+    if len(set(x)) == 3:
+        c += 1
+print(c)
