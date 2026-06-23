@@ -1,7 +1,6 @@
-nums = [1,13,10,12,31]
-s = str(nums)[1:-1]
-s = s[::-1]
-l = s.split(" ,")
-l = list(map(int, l))
-print(l)
-nums += l
+nums = ["01","10"]
+ans = []
+for i in range(2**len(nums)):
+    if format(i,f"0{len(nums)}b") not in nums:
+        print(format(i,f"0{len(nums)}b"))
+        break
