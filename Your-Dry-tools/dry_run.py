@@ -1,11 +1,6 @@
-freq,val = {},True
-for x in s:
-    if x not in freq:
-        freq[x] = 1
-    else:
-        freq[x] += 1
-for x in freq:
-    if freq.get(x) != max(freq.values()):
-        val = False
-        break
-print(val)
+paths = [["pYyNGfBYbm","wxAscRuzOl"],["kzwEQHfwce","pYyNGfBYbm"]]
+to = {x[1] for x in paths}
+fro = {x[0] for x in paths}
+print(to)
+print(fro)
+print(list(to - fro))
