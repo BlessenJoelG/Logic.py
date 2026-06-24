@@ -1,5 +1,10 @@
-nums = [5,1,5,2,5,3,5,4]
+freq,c = {},0
 for x in nums:
-    if nums.count(x) == (len(nums)//2):
-        print(x)
-        break
+    if x not in freq:
+        freq[x] = 1
+    else:
+        freq[x] += 1
+for x in freq:
+    if freq.get(x) == max(freq.values()):
+        c += freq.get(x)
+print(c)
