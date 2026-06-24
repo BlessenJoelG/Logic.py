@@ -1,14 +1,11 @@
-nums1 = [1,2,2]
-nums2 = [4,3,3]
-nums3 = [5]
-ans = set()
-for x in set(nums1):
-    if x in nums2:
-        ans.add(x)
-for x in set(nums2):
-    if x in nums3:
-        ans.add(x)
-for x in set(nums3):
-    if x in nums1:
-        ans.add(x)
-print(list(ans))
+s = "codeleet"
+indices = [4,5,6,7,0,2,1,3]
+freq,ans = {},""
+if indices == sorted(indices):
+    print(s)
+else:
+    for i in range(len(indices)):
+        freq[indices[i]] = s[i]
+    for x in sorted(freq.keys()):
+        ans += freq[x]
+    print(ans)
