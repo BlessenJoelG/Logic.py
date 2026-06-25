@@ -1,14 +1,11 @@
-items = [["phone","blue","pixel"],["computer","silver","phone"],["phone","gold","iphone"]]
-ruleKey = "type"
-ruleValue = "phone"
-c = 0
-if ruleKey == "type":
-    x = 0
-elif ruleKey == "color":
-    x = 1
-elif ruleKey == "name":
-    x = 2
-for item in items:
-    if item[x] == ruleValue:
-        c += 1
+s = "Myself2 Me1 I4 and3"
+freq,c = {},""
+for x in list(s.split(" ")):
+    if x not in freq:
+        freq[x[-1]] = x[:]
+for x in sorted(freq.keys()):
+    c += freq[x]
+for i in range(len(c)):
+    if c[i].isalpha() == False:
+        c = c.replace(c[i]," ")
 print(c)
