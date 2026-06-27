@@ -1,5 +1,5 @@
-s = "a1b2c3d4e"
-s = list(s)
-for i in range(1,len(s),2):
-    s[i] = chr(ord(s[i-1])+int(s[i]))
-print("".join(s))
+nums = [1,2,3,4,5]
+ans = []
+for i in range(len(nums)):
+    ans.append(len(set(nums[:i+1]))-len(set(nums[i+1:])))
+print(ans)
